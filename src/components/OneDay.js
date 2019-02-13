@@ -29,10 +29,8 @@ const OneDay = ({ day, data, handleReturnClick }) => {
 
   const renderThreeHourlyItem = item => {
     const formatTime = time => {
-      console.log("time", time);
       var date = new Date(0);
       date.setUTCSeconds(time);
-
       let hours = date.getHours() + ":00";
       return hours;
     };

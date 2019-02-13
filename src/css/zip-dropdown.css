@@ -10,10 +10,6 @@
   margin: -1em 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   z-index: 1;
-  /* overflow: hidden;
-  transition: transform 0.3s ease-out;
-  transform: scaleY(1);
-  transform-origin: top; */
   position: absolute;
 }
 
@@ -46,8 +42,6 @@
   100% {
     display: block;
     opacity: 1;
-    /* max-height: 30px; */
-    /* overflow: auto; */
   }
 }
 
@@ -91,6 +85,7 @@
   padding: 5px;
   cursor: pointer;
 }
+
 .saved-zip-item__remove-button {
   background: #546e7a;
   font-size: 14px;

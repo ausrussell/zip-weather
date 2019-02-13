@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.page-container {
+  /*with the gradient sky */
+  height: 100vh;
+  width: 100%;
+  background: #e5e5e5; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #e5e5e5 0%,
+    #0fb3ff 24%,
+    #003fff 61%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #e5e5e5 0%,
+    #0fb3ff 24%,
+    #003fff 61%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e5e5e5 0%,
+    #0fb3ff 24%,
+    #003fff 61%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#003fff',GradientType=0 );
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.view-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.refresh-timer {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #80d6ff;
+}
+
+.refresh-timer__background {
+  background-color: #42a5f5;
+  height: 4px;
+}

@@ -1,0 +1,113 @@
+.zip-dropdown {
+  position: relative;
+}
+
+.zip-dropdown__content {
+  display: none;
+  background: #fff;
+  padding: 1em;
+  list-style: none;
+  margin: -1em 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  z-index: 1;
+  /* overflow: hidden;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(1);
+  transform-origin: top; */
+  position: absolute;
+}
+
+.zip-dropdown__content.active {
+  display: block;
+  left: 2em;
+  top: 1em;
+  overflow: hidden;
+  animation: fadeInFromNone 0.75s ease-out;
+  overflow: auto;
+  max-height: 300px;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+    max-height: 1px;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.1;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    /* max-height: 30px; */
+    /* overflow: auto; */
+  }
+}
+
+.zip-dropdown__content ul {
+  margin: 0;
+  padding: 0;
+}
+.zip-dropdown__down-arrow {
+  transform: rotate(0deg);
+  transition: 0.75s ease-in-out;
+}
+.zip-dropdown__down-arrow.active {
+  transform: rotate(-90deg);
+  transition: 0.75s ease-in-out;
+}
+
+.saved-zip-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cfd8dc;
+  background: #fff;
+  padding-right: 0.5em;
+}
+
+.saved-zip-item:hover {
+  /* background-color: #eceff1; */
+}
+
+.saved-zip-item__title {
+  border: none;
+}
+
+.saved-zip-item__title:hover {
+  background-color: #eceff1;
+}
+
+.saved-zip-item__title {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-size: 22px;
+  margin: 5px 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+.saved-zip-item__remove-button {
+  background: #546e7a;
+  font-size: 14px;
+  border-radius: 9px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.saved-zip-item__remove-button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.22), 0 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+.drag-handle {
+  color: #b0bec5;
+  cursor: pointer;
+}
+
+.drag-handle:hover {
+  color: #546e7a;
+}

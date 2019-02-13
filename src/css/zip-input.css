@@ -1,0 +1,38 @@
+.zip-container {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+
+.zip-container h1 {
+  margin: 0 0 1em 0;
+  color: #37474f;
+}
+
+.zip-input,
+.input-error {
+  padding: 10px;
+  border-radius: 5px;
+  border: aliceblue;
+  font-size: 18px;
+  color: #443399;
+  width: 11em;
+}
+
+.input-error {
+  background: #b00020;
+  color: #fff;
+}
+
+.title-card {
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: -20em; */
+  margin-bottom: 5em;
+}

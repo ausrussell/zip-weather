@@ -1,0 +1,65 @@
+.view-header,
+.view-header__main-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-header {
+  margin-top: 2em;
+}
+
+.view-header__main-group {
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  padding: 2em 0.5em 2em 3em;
+  position: relative;
+}
+
+.view-header__title {
+  font-size: 2em;
+  color: #37474f;
+  margin: 0 0.5em 0 0;
+}
+
+.view-header__add-buttonXXX {
+  color: #616161;
+  width: 40px;
+  height: 40px;
+  margin-left: 0.5rem;
+  padding: 0 8px;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.view-header__add-button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.22), 0 4px 4px rgba(0, 0, 0, 0.12);
+  color: #424242;
+  background-color: #fafafa;
+}
+
+.view-header__cancel-button,
+.view-header__add-button {
+  border: 1px solid #cfd8dc;
+  font-size: 14px;
+  border-radius: 9px;
+  font-weight: 300;
+  color: ##cfd8dc;
+  margin: 0.5em;
+}
+.view-header__cancel-button:hover,
+.view-header__add-button:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: #424242;
+  background-color: #fafafa;
+}
+
+/* .view-header__cancel-button {
+  fill: #616161;
+}
+
+.view-header__cancel-button:hover {
+  fill: #424242;
+} */

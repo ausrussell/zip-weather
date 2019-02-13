@@ -1,0 +1,87 @@
+.days-holder {
+  /* flex-direction: row;
+  display: flex;
+  flex-wrap: wrap; */
+  display: flex;
+}
+
+.five-day-holder {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.five-day-card,
+.one-day-card {
+  background: #fff;
+  display: flex;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  min-width: 8em;
+}
+
+.five-day-card {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.five-day-card h2 {
+  color: #546e7a;
+  margin-top: 0.5em;
+}
+
+.day-card__description {
+  font-size: 21px;
+  margin-bottom: 0.5em;
+}
+
+.one-day-card {
+  overflow: auto;
+}
+.five-day-card {
+  cursor: pointer;
+}
+
+.five-day-card:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 20px #fff);
+}
+
+.return-button {
+  /* float: right; */
+  cursor: pointer;
+  border: none;
+  background: none;
+  border: 1px solid #cfd8dc;
+  font-size: 14px;
+  border-radius: 9px;
+  font-weight: 300;
+  color: ##cfd8dc;
+}
+.one-day__table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.one-day-row,
+.one-day__3hour-unit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #cfd8dc;
+}
+.one-day-card {
+  /* min-width: 90%;
+  width: 40em; */
+}
+
+.day-cell {
+  width: 16.6%;
+  flex: 1;
+  margin: 1em;
+  flex-grow: 1;
+  flex-basis: 0;
+}

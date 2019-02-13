@@ -74,7 +74,7 @@ const processJson = json => {
 };
 
 const GetWeatherDataFromZip = zip => {
-  const url = new URL("http://api.openweathermap.org/data/2.5/forecast");
+  const url = new URL("https://api.openweathermap.org/data/2.5/forecast");
   const params = {
     zip: zip + ",us",
     APPID: "8c2512992e4a719d359e1fcfc1e0d3b5",

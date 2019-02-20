@@ -7,7 +7,7 @@ class LocalStorage {
 
   checkZip(zip) {
     let savedData = JSON.parse(localStorage.getItem("savedZipData"));
-    if (zip in savedData) {
+    if (savedData && zip in savedData) {
       return savedData[zip];
     }
   }

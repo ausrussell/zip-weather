@@ -5,6 +5,7 @@ import Timer from "./Timer";
 import GetWeatherDataFromZip from "../api/OpenWeatherMap";
 import ViewHeader from "./ViewHeader";
 import ZipDropdown from "./ZipDropdown";
+import LocalStorage from "../api/LocalStorage";
 import "../css/app.css";
 
 class App extends Component {
@@ -15,14 +16,10 @@ class App extends Component {
     errors: [],
     savedZips: []
   };
+
   constructor(props) {
     super(props);
     this.currentData = [];
-  }
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState({ number: this.state.number + 1 });
-    }, 1000);
   }
 
   handleTimerRefresh = () => {
@@ -32,19 +29,27 @@ class App extends Component {
 
   handleSubmit(zip) {
     //test for valid zip
-
-    console.log("zip input", zip);
     this.setState({ errors: [] });
-    GetWeatherDataFromZip(zip)
-      .then(data => {
-        this.setState({ currentData: data, view: "view", currentZip: zip });
-      })
-      .catch(error => {
-        let newErrorArray = this.state.errors.concat(
-          "We had trouble getting a forecast for that zip code... Are you sure it's correct?"
-        );
-        this.setState({ errors: newErrorArray });
-      });
+    let storedData = LocalStorage.checkZip(zip);
+    if (storedData) {
+      console.log("saved already");
+      this.setCurrentData(storedData, zip);
+    } else {
+      GetWeatherDataFromZip(zip)
+        .then(data => {
+          LocalStorage.saveData(data, zip);
+          this.setCurrentData(data, zip);
+        })
+        .catch(error => {
+          let newErrorArray = this.state.errors.concat(
+            "We had trouble getting a forecast for that zip code... Are you sure it's correct?"
+          );
+          this.setState({ errors: newErrorArray });
+        });
+    }
+  }
+  setCurrentData(data, zip) {
+    this.setState({ currentData: data, view: "view", currentZip: zip });
   }
 
   handleClickCancel = () => {
@@ -108,6 +113,5 @@ class App extends Component {
     );
   }
 }
-//props.handleClickZip(zip)
 
 export default App;
